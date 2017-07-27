@@ -2,10 +2,10 @@
  //SETUP
 
 //Your username
-$u = "nickfrank";
+$u = "nodws";
 
 //API key
-$key = "ILlKa8AzRAm5JU7GZV8Be9f04bufst7N"
+$key = "YOUR APP KEY"
 
 ?>
 <!doctype html>
@@ -72,8 +72,7 @@ curl_close($ch);
 echo "<h2>{$o->project->name}</h2>";
 foreach ($o->project->modules as $v) {
 	$v->src = str_replace('/disp/','/max_1200/', $v->src);
-	echo $v->text ? "<p>$v->text</p>" : "<img src='$v->src' width=100%>";
-	
+	echo $v->text ? "<p>$v->text</p>" : "<img src='$v->src' width=100%>";	
 }
 exit;
 }
